@@ -1,0 +1,21 @@
+User: Owner, Admin, Sales
+Data: Outlet, Product
+
+Data Outlet :
+    Nama
+    Alamat
+    GPS
+    Stock
+    Foto
+
+Data Product :
+    Nama
+
+User Owner, Admin :
+    Create Sales User
+
+User Owner :
+    Read Data Outlet
+
+User :
+    Create, Delete, Update, Read Many Data Outlet
