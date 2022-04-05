@@ -250,3 +250,15 @@ CRITICAL - 2022-04-05 16:20:41 --> Call to undefined function App\Models\int()
 #4 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
 #6 {main}
+CRITICAL - 2022-04-05 18:14:29 --> Undefined property: CodeIgniter\View\View::$request
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Views\owner\index.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\WORK\\D...', 98)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(210): include('C:\\Users\\WORK\\D...')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Common.php(1089): CodeIgniter\View\View->render('owner/index', Array, true)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Home.php(41): view('owner/index', Array)
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#10 {main}

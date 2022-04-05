@@ -29,7 +29,7 @@ class Home extends BaseController
             array_push($transactionData,[
                 "product_id"=>$v->id,
                 "product_name"=>$v->nama,
-                "transaction"=>$this->transactionModel->getTransactionsPerMonth($v->id,date("Y"))
+                "transaction"=>$this->transactionModel->getTransactionsPerMonth($v->id,intval($this->request->getGet("year")?? date("Y")))
             ]);
         }
         
@@ -37,7 +37,9 @@ class Home extends BaseController
             return view("owner/index", [
                 "outletCount" => count($this->outletModel->findAll()),
                 "salesCount" => count($this->userModel->where("role", "sales")->findAll()),
-                "transactionData" => $transactionData
+                "productCount" => count($products),
+                "transactionData" => $transactionData,
+                "year" => intval($this->request->getGet("year") ?? date("Y")) 
             ]);
         }
         return view('auth/login');
