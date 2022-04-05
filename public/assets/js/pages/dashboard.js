@@ -48,7 +48,7 @@ var optionsww = {
 		curve: 'straight'
 	},
 	title: {
-		text: 'Product Trends by Month',
+		text: 'Product Terjual per Bulan',
 		align: 'left'
 	},
 	grid: {
@@ -141,8 +141,7 @@ let optionsIndonesia = {
 
 
 
-var chartProfileVisit = new ApexCharts(document.querySelector("#chart-profile-visit"), optionsww);
-var chartProfileVisit2 = new ApexCharts(document.querySelector("#chart-profile-visit2"), optionsProfileVisit);
+/* var chartProfileVisit = new ApexCharts(document.querySelector("#chart-profile-visit"), optionsww); */
 var chartVisitorsProfile = new ApexCharts(document.getElementById('chart-visitors-profile'), optionsVisitorsProfile)
 var chartEurope = new ApexCharts(document.querySelector("#chart-europe"), optionsEurope);
 var chartAmerica = new ApexCharts(document.querySelector("#chart-america"), optionsAmerica);
@@ -151,6 +150,4 @@ var chartIndonesia = new ApexCharts(document.querySelector("#chart-indonesia"), 
 chartIndonesia.render();
 chartAmerica.render();
 chartEurope.render();
-chartProfileVisit.render();
-chartProfileVisit2.render();
 chartVisitorsProfile.render()

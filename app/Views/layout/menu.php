@@ -14,3 +14,10 @@
         <span>Sales</span>
     </a>
 </li>
+
+<li class="sidebar-item <?= (current_url() == base_url("/index.php")."/products") ? "active":""; ?>">
+    <a href="<?= base_url("/products") ?>" class='sidebar-link'>
+        <i class="bi bi-people"></i>
+        <span>Products</span>
+    </a>
+</li>
