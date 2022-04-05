@@ -75,6 +75,18 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+                    <div class="btn-group mb-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tahun 2022
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">2022</a>
+                                <a class="dropdown-item" href="#">2021</a>
+                                <a class="dropdown-item" href="#">2020</a>
+                            </div>
+                        </div>
+                    </div>
                     <div id="chart-profile-visit"></div>
                 </div>
             </div>
