@@ -13,7 +13,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <h6 class="text-muted font-semibold">Total Outlet</h6>
-                                    <h6 class="font-extrabold mb-0">112.000</h6>
+                                    <h6 class="font-extrabold mb-0"><?= $outletCount ?></h6>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <h6 class="text-muted font-semibold">Total Sales</h6>
-                                    <h6 class="font-extrabold mb-0">183.000</h6>
+                                    <h6 class="font-extrabold mb-0"><?= $salesCount ?></h6>
                                 </div>
                             </div>
                         </div>
@@ -74,23 +74,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4>Stok Produk 1 Terjual per Bulan</h4>
-                        </div>
                         <div class="card-body">
                             <div id="chart-profile-visit"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Stok Produk 2 Terjual per Bulan</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="chart-profile-visit2"></div>
                         </div>
                     </div>
                 </div>
