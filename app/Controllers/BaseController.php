@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -48,5 +49,16 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+    }
+
+    public function isRole($role) {
+        if (!session()->get("user_id")) {
+            return false;
+        }
+        $user = new UserModel();
+        if ($user->where("id", session()->get("user_id"))->first()->role == $role) {
+            return true;
+        }
+        return false;
     }
 }

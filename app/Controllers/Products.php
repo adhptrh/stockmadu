@@ -18,7 +18,7 @@ class Products extends BaseController
 
     public function index()
     {
-        if (session()->get("user_id")) {
+        if ($this->isRole("owner") || $this->isRole("admin")) {
 
             return view("pages/products",[
                 "products"=>$this->productModel->findAll()

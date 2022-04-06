@@ -57,7 +57,7 @@ class Home extends BaseController
             $i++;
         }
         
-        if (session()->get("user_id")) {
+        if ($this->isRole("owner") || $this->isRole("admin")) {
             return view("owner/index", [
                 "outletCount" => count($this->outletModel->findAll()),
                 "salesCount" => count($this->userModel->where("role", "sales")->findAll()),
@@ -67,7 +67,9 @@ class Home extends BaseController
                 "outletsData" => $outletsKV,
                 "year" => intval($this->request->getGet("year") ?? date("Y")) 
             ]);
+        } else {
+            session()->destroy();
+            return view('auth/login');
         }
-        return view('auth/login');
     }
 }
