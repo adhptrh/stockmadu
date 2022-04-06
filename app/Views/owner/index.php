@@ -99,16 +99,43 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <?php
-                                for ($i=date("Y");$i>2020;$i--) {
-                                    ?>
-                                        <a class="dropdown-item" href="?year=<?= $i ?>"><?= $i ?></a>
-                                    <?php
+                                for ($i = date("Y"); $i > 2020; $i--) {
+                                ?>
+                                    <a class="dropdown-item" href="?year=<?= $i ?>"><?= $i ?></a>
+                                <?php
                                 }
                                 ?>
                             </div>
                         </div>
                     </div>
                     <div id="chart-profile-visit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    Outlet dengan angka penjualan terbanyak
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="table1">
+                        <thead>
+                            <tr>
+                                <th>Nama Sales</th>
+                                <th>Nama Outlet</th>
+                                <?php 
+                                foreach ($products as $k=>$v) {
+                                    echo "<th>Jumlah ".$v->nama." terjual</th>";
+                                }
+                                ?>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -179,6 +206,8 @@
 <?= $this->endSection() ?>
 <?= $this->section("footer") ?>
 <script>
+    let table1 = document.querySelector('#table1');
+    let dataTable = new simpleDatatables.DataTable(table1);
     var optionswsw = {
         series: [<?php
                     foreach ($transactionData as $k => $v) {

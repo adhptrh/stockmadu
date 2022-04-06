@@ -262,3 +262,344 @@ CRITICAL - 2022-04-05 18:14:29 --> Undefined property: CodeIgniter\View\View::$r
 #8 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
 #10 {main}
+ERROR - 2022-04-05 21:28:12 --> Unknown column 'outlets.id' in 'on clause'
+CRITICAL - 2022-04-05 21:28:12 --> Unknown column 'outlets.id' in 'on clause'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(38): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+CRITICAL - 2022-04-05 21:31:02 --> Call to a member function get() on array
+#0 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#1 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#5 {main}
+ERROR - 2022-04-05 21:47:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' COUNT(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:47:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' COUNT(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `SELECT`...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT`...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT`...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT`...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:48:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' COUNT('count')
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:48:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' COUNT('count')
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `SELECT`...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT`...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT`...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT`...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:48:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' SUM('count')
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:48:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' SUM('count')
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `SELECT`...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT`...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT`...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT`...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:48:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' SUM(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:48:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' SUM(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `SELECT`...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT`...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT`...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT`...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:48:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:48:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(count)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SELECT S...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT S...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT S...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SELECT S...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:49:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(id)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:49:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(id)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SELECT S...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT S...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT S...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SELECT S...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 21:49:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(outlet_id)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+CRITICAL - 2022-04-05 21:49:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(outlet_id)
+FROM `transactions`
+WHERE `outlet_id` = 1
+AND `count` < 0' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SELECT S...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT S...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT S...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SELECT S...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 22:26:23 --> Unknown column 'users.name' in 'field list'
+CRITICAL - 2022-04-05 22:26:23 --> Unknown column 'users.name' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `user...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `user...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `user...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `user...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+CRITICAL - 2022-04-05 22:38:06 --> Call to undefined method App\Models\TransactionModel::findFirst
+#0 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(50): CodeIgniter\Model->__call('findFirst', Array)
+#1 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#6 {main}
+ERROR - 2022-04-05 22:45:37 --> Unknown table 'stockmadu.t'
+CRITICAL - 2022-04-05 22:45:37 --> Unknown table 'stockmadu.t'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `t`.*, `...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `t`.*, `...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `t`.*, `...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 22:46:01 --> Unknown table 'stockmadu.t'
+CRITICAL - 2022-04-05 22:46:01 --> Unknown table 'stockmadu.t'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `t`.*, `...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `t`.*, `...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `t`.*, `...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+ERROR - 2022-04-05 22:46:10 --> Unknown table 'stockmadu.t'
+CRITICAL - 2022-04-05 22:46:10 --> Unknown table 'stockmadu.t'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `t`.*, `...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `t`.*, `...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `t`.*, `...')
+#3 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `...', Array, false)
+#4 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\BaseModel->findAll()
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#8 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#12 {main}
+CRITICAL - 2022-04-05 22:48:35 --> Undefined variable $db
+#0 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\MainFolder\\c...', 40)
+#1 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#6 {main}
+ERROR - 2022-04-05 22:48:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user_id' at line 1
+CRITICAL - 2022-04-05 22:48:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user_id' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.* FROM...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.* FROM...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.* FROM...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.* FROM...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:49:22 --> Unknown column 'u.nama' in 'field list'
+CRITICAL - 2022-04-05 22:49:22 --> Unknown column 'u.nama' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.na...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.na...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.na...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.na...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:49:35 --> Unknown column 'users.id' in 'on clause'
+CRITICAL - 2022-04-05 22:49:35 --> Unknown column 'users.id' in 'on clause'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.* ...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.* ...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.* ...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.* ...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:49:45 --> Unknown column 'u.nama' in 'field list'
+CRITICAL - 2022-04-05 22:49:45 --> Unknown column 'u.nama' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.na...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.na...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.na...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.na...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:50:07 --> Unknown column 'u.nama' in 'field list'
+CRITICAL - 2022-04-05 22:50:07 --> Unknown column 'u.nama' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.na...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.na...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.na...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.na...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:50:17 --> Unknown column 'u.nama' in 'field list'
+CRITICAL - 2022-04-05 22:50:17 --> Unknown column 'u.nama' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.na...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.na...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.na...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.na...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:50:31 --> Unknown column 'users.nama' in 'field list'
+CRITICAL - 2022-04-05 22:50:31 --> Unknown column 'users.nama' in 'field list'
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,user...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,user...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,user...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,user...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}
+ERROR - 2022-04-05 22:51:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as awok FROM outlets AS o INNER JOIN users AS u ON u.id = o.user_id' at line 1
+CRITICAL - 2022-04-05 22:51:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as awok FROM outlets AS o INNER JOIN users AS u ON u.id = o.user_id' at line 1
+#0 D:\MainFolder\ci4\stockmadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT o.*,u.* ...', 0)
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT o.*,u.* ...')
+#2 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT o.*,u.* ...')
+#3 D:\MainFolder\ci4\stockmadu\app\Controllers\Home.php(40): CodeIgniter\Database\BaseConnection->query('SELECT o.*,u.* ...')
+#4 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#9 {main}

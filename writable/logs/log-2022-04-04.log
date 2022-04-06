@@ -153,3 +153,17 @@ CRITICAL - 2022-04-04 16:57:41 --> Undefined property: CodeIgniter\View\View::$r
 #13 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #14 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
 #15 {main}
+ERROR - 2022-04-04 21:08:22 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-04-04 21:08:22 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\MainFolder\ci4\stockmadu\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\MainFolder\ci4\stockmadu\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\MainFolder\ci4\stockmadu\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\MainFolder\ci4\stockmadu\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 D:\MainFolder\ci4\stockmadu\app\Controllers\Auth.php(23): CodeIgniter\BaseModel->findAll()
+#5 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Auth->login()
+#6 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 D:\MainFolder\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\MainFolder\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\MainFolder\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('D:\\MainFolder\\c...')
+#10 {main}
