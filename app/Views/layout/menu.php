@@ -25,7 +25,7 @@
 <li class="sidebar-item <?= (current_url() == base_url("/index.php")."/users/modify/".session()->get("user_id")) ? "active":""; ?>">
     <a href="<?= base_url("/users/modify/".session()->get("user_id")) ?>" class='sidebar-link'>
         <i class="bi bi-people"></i>
-        <span>Ubah Password</span>
+        <span>Setting Akun</span>
     </a>
 </li>
 
