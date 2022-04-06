@@ -2,7 +2,7 @@
 <?= $this->section("content") ?>
 <div class="card">
     <div class="card-header">
-        Tambah User
+        Edit User
     </div>
     <div class="card-body">
         <form action="<?= base_url("/users/edit/".$user->id) ?>" method="POST">
@@ -20,7 +20,7 @@
             </div>
             <fieldset class="form-group">
                 <label for="basicSelect">Role</label>
-                <select name="role" class="form-select" id="basicSelect">
+                <select name="role" class="form-select" id="basicSelect" <?= ($session->get("user_id") == $user->id) ? "disabled":"" ?>>
                     <option value="sales" <?= ($user->role == "sales") ? "selected":"" ?>>Sales</option>
                     <option value="admin" <?= ($user->role == "admin") ? "selected":"" ?>>Admin</option>
                     <option value="owner" <?= ($user->role == "owner") ? "selected":"" ?>>Owner</option>

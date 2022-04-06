@@ -19,7 +19,7 @@ class Users extends BaseController
         if ($this->isRole("owner") || $this->isRole("admin")) {
             $users = $this->userModel->where("id !=",session()->get("user_id"))->findAll();
             return view("pages/users", [
-                "users"=>$users
+                "users"=>$users,
             ]);
         }
         session()->destroy();
@@ -46,7 +46,8 @@ class Users extends BaseController
         $user = $this->userModel->find($id);
 
         return view("pages/users_edit", [
-            "user"=>$user
+            "user"=>$user,
+            "session"=>session()
         ]);
     }
 
