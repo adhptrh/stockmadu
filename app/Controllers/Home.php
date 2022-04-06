@@ -65,7 +65,12 @@ class Home extends BaseController
                 "products" => $products,
                 "transactionData" => $transactionData,
                 "outletsData" => $outletsKV,
+                "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
                 "year" => intval($this->request->getGet("year") ?? date("Y")) 
+            ]);
+        } elseif ($this->isRole("sales")) {
+            return view('sales/index',[
+                "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             ]);
         } else {
             session()->destroy();

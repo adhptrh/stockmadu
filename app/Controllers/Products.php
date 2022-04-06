@@ -9,11 +9,12 @@ use App\Models\UserModel;
 
 class Products extends BaseController
 {
-    public $productModel;
+    public $productModel, $userModel;
 
     function __construct()
     {
         $this->productModel = new ProductModel();
+        $this->userModel = new UserModel();
     }
 
     public function index()
@@ -21,7 +22,8 @@ class Products extends BaseController
         if ($this->isRole("owner") || $this->isRole("admin")) {
 
             return view("pages/products",[
-                "products"=>$this->productModel->findAll()
+                "products"=>$this->productModel->findAll(),
+                "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             ]);
         }
         session()->destroy();
@@ -48,7 +50,8 @@ class Products extends BaseController
 
         return view("pages/products_edit", [
             "product"=>$product,
-            "id"=>$id
+            "id"=>$id,
+            "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
         ]);
     }
 

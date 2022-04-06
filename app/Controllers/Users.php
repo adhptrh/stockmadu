@@ -20,6 +20,7 @@ class Users extends BaseController
             $users = $this->userModel->where("id !=",session()->get("user_id"))->findAll();
             return view("pages/users", [
                 "users"=>$users,
+                "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             ]);
         }
         session()->destroy();
