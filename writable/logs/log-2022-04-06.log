@@ -400,3 +400,63 @@ CRITICAL - 2022-04-06 03:34:52 --> Attempt to read property "role" on null
 #4 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
 #6 {main}
+CRITICAL - 2022-04-06 14:17:10 --> Undefined property: App\Controllers\Users::$user
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Users.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\WORK\\D...', 65)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Users->edit('5')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#6 {main}
+CRITICAL - 2022-04-06 14:17:27 --> Undefined variable $users
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Views\pages\users_edit.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\WORK\\D...', 40)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(210): include('C:\\Users\\WORK\\D...')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Common.php(1089): CodeIgniter\View\View->render('pages/users_edi...', Array, true)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Users.php(49): view('pages/users_edi...', Array)
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Users->modify('5')
+#6 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#10 {main}
+CRITICAL - 2022-04-06 14:18:01 --> Undefined variable $users
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Views\pages\users_edit.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\WORK\\D...', 40)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(210): include('C:\\Users\\WORK\\D...')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Common.php(1089): CodeIgniter\View\View->render('pages/users_edi...', Array, true)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Users.php(48): view('pages/users_edi...', Array)
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Users->modify('5')
+#6 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#10 {main}
+CRITICAL - 2022-04-06 14:18:12 --> Undefined variable $users
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Views\pages\users_edit.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\WORK\\D...', 40)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(210): include('C:\\Users\\WORK\\D...')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Common.php(1089): CodeIgniter\View\View->render('pages/users_edi...', Array, true)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Users.php(48): view('pages/users_edi...', Array)
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Users->modify('5')
+#6 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#10 {main}
+CRITICAL - 2022-04-06 14:21:24 --> Undefined property: App\Controllers\Users::$user
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Users.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\WORK\\D...', 74)
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Users->edit('6')
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#6 {main}
+CRITICAL - 2022-04-06 14:33:56 --> count(): Argument #1 ($value) must be of type Countable|array, App\Entities\User given
+#0 C:\Users\WORK\Documents\dika\ci4\stockmadu\app\Controllers\Auth.php(24): count(Object(App\Entities\User))
+#1 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(832): App\Controllers\Auth->login()
+#2 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\WORK\Documents\dika\ci4\stockmadu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\WORK\Documents\dika\ci4\stockmadu\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\WORK\\D...')
+#6 {main}

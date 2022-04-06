@@ -35,7 +35,7 @@ class Home extends BaseController
                 "transaction"=>$this->transactionModel->getTransactionsPerMonth($v->id,intval($this->request->getGet("year")?? date("Y")))
             ]);
         }
-
+;
         $outletsKV = [];
         $outlets = $this->db->query("SELECT o.*,u.username FROM outlets AS o INNER JOIN users AS u ON u.id = o.user_id")->getResult();
         $i = 0;

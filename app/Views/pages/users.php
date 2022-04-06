@@ -49,6 +49,7 @@
                         <td><?= $v->role ?></td>
                         <td>
                             <button id="delete_<?= $v->id ?>" class="btn btn-danger">Delete</button>
+                            <a href="<?= base_url("/users/modify/".$v->id) ?>" class="btn btn-warning">Edit</a>
                         </td>
                     </tr>
                     <?php

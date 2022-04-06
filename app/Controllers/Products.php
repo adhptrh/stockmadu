@@ -24,7 +24,8 @@ class Products extends BaseController
                 "products"=>$this->productModel->findAll()
             ]);
         }
-        return view('auth/login');
+        session()->destroy();
+        return redirect()->to(base_url("/"));
     }
 
     public function add() {

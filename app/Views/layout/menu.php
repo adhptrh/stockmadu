@@ -21,3 +21,10 @@
         <span>Products</span>
     </a>
 </li>
+
+<li class="sidebar-item">
+    <a href="<?= base_url("/auth/logout") ?>" class='sidebar-link bg-danger text-white'>
+        <i class="bi bi-box-arrow-in-left text-white"></i>
+        <span>Log Out</span>
+    </a>
+</li>
