@@ -114,26 +114,44 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
             <div class="card">
                 <div class="card-header">
-                    Outlet dengan angka penjualan terbanyak
+                    Data Jual Outlets
                 </div>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
-                                <th>Nama Sales</th>
                                 <th>Nama Outlet</th>
+                                <th>Nama Sales</th>
                                 <?php 
                                 foreach ($products as $k=>$v) {
-                                    echo "<th>Jumlah ".$v->nama." terjual</th>";
+                                    echo "<th>".$v->nama."</th>";
                                 }
                                 ?>
+                                <th>Total Terjual</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                            <?php
+                            foreach ($outletsData as $k=>$v) {
+                                ?>
+                                <tr>
+                                    <td><?= $v["nama_outlet"] ?></td>
+                                    <td><?= $v["nama_user"] ?></td>
+                                    <?php
+                                    foreach ($outletsData[$k]["products"] as $kk=>$vv) {
+                                        ?>
+                                        <td><?= $vv["total"] ?></td>
+                                        <?php
+                                    }
+                                    ?>
+                                    <td><?= $v["total"] ?></td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -208,6 +226,17 @@
 <script>
     let table1 = document.querySelector('#table1');
     let dataTable = new simpleDatatables.DataTable(table1);
+
+    function getColumnIndexByName(dt, name) {
+        for (i=0;i<dt.headings.length;i++) {
+            if (dt.headings[i].innerText.toLowerCase() == name.toLowerCase()) {
+                return i
+            }
+        }
+        return -1
+    }
+    dataTable.columns().sort(getColumnIndexByName(dataTable,"total terjual"),"desc")
+
     var optionswsw = {
         series: [<?php
                     foreach ($transactionData as $k => $v) {

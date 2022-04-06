@@ -44,21 +44,18 @@ class Home extends BaseController
                 "nama_outlet" => $v->nama,
                 "nama_user" => $v->username,
                 "products" => [],
+                "total"=>0
             ]);
-            return json_encode($v->id);
             foreach ($products as $kk=>$vv) {
-                $total = 0;
-                $getTotal = $this->transactionModel->where("outlet_id",$v->id)->where("count <",0)->findAll();
-                return json_encode($getTotal);
+                $getTotal = $this->transactionModel->selectSum("count")->where("product_id",$vv->id)->where("outlet_id",$v->id)->where("count <",0)->first();
+                $outletsKV[$i]["total"] += abs($getTotal->count);
                 array_push($outletsKV[$i]["products"], [
                     "nama"=>$vv->nama,
-                    "total"=>0
+                    "total"=>abs($getTotal->count)
                 ]);
             }
             $i++;
         }
-
-        return json_encode($outletsKV);
         
         if (session()->get("user_id")) {
             return view("owner/index", [
@@ -67,6 +64,7 @@ class Home extends BaseController
                 "productCount" => count($products),
                 "products" => $products,
                 "transactionData" => $transactionData,
+                "outletsData" => $outletsKV,
                 "year" => intval($this->request->getGet("year") ?? date("Y")) 
             ]);
         }
