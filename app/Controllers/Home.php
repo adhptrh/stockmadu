@@ -69,8 +69,10 @@ class Home extends BaseController
                 "year" => intval($this->request->getGet("year") ?? date("Y")) 
             ]);
         } elseif ($this->isRole("sales")) {
+            $outlets = $this->outletModel->where("user_id",session()->get("user_id"))->findAll();
             return view('sales/index',[
                 "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
+                "outlets"=>$outlets
             ]);
         } else {
             session()->destroy();
