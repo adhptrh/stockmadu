@@ -15,8 +15,6 @@ class Outlets extends BaseController
 
     function __construct()
     {
-        header("X-Frame-Options: ALLOW-FROM https://maps.google.com/");
-        header("X-Frame-Options: ALLOW-FROM https://www.google.com/");
         $this->outletModel = new OutletModel();
         $this->userModel = new UserModel();
     }
@@ -28,6 +26,8 @@ class Outlets extends BaseController
     }
 
     public function modify($id) {
+        header("X-Frame-Options: ALLOW-FROM https://maps.google.com/");
+        header("X-Frame-Options: ALLOW-FROM https://www.google.com/");
         return view("pages/outlets_edit",[
             "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             "outlet"=>$this->outletModel->where("id", $id)->first()
@@ -58,6 +58,37 @@ class Outlets extends BaseController
         $this->outletModel->delete($id);
         session()->setFlashdata("success","outlet_deleted");
         return redirect()->to(base_url("/"));;
+    }
+
+    public function edit($id) {
+
+        $photo = $this->request->getFile("photo");
+        if (!$photo->getError()) {
+            $randname = $photo->getRandomName();
+            $filePath = "uploads";
+            $photo->move($filePath, $randname);
+        } else {
+            $randname = $this->outletModel->where("id",$id)->first()->photo;
+        }
+
+        $data = [
+            "nama"=>$this->request->getPost("nama"),
+            "alamat"=>$this->request->getPost("alamat"),
+            "longitude"=>$this->request->getPost("longitude"),
+            "latitude"=>$this->request->getPost("latitude"),
+            "photo"=>$randname,
+        ];
+
+        $this->outletModel->where("id",$id)->set($data)->update();
+        session()->setFlashdata("success","outlet_edited");
+        return redirect()->to(base_url("/outlets/modify/".$id));
+    }
+
+    public function manage($id) {
+        return view("pages/outlet_manage",[
+            "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
+            "outlet"=>$this->outletModel->where("id",$id)->first(),
+        ]);
     }
 
 }

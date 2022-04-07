@@ -22,9 +22,6 @@
                 <label for="basicInput">Longitude</label>
                 <input id="long" type="text" name="longitude" value="<?= $outlet->longitude ?>" class="form-control" id="basicInput" placeholder="Longitude">
             </div>
-            <div class="form-group" id="map_content">
-                <iframe id="map" src="https://maps.google.com/maps?q=<?= $outlet->latitude ?>,<?= $outlet->longitude ?>&hl=es;z=14&amp;output=embed" allow></iframe>
-            </div>
             <div class="form-group">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
@@ -43,17 +40,4 @@
 
 <?= $this->endSection() ?>
 <?= $this->section("footer") ?>
-<script>
-    let map = document.getElementById("map_content")
-    let lat = document.getElementById("lat")
-    let long = document.getElementById("long")
-    function renderMap() {
-        map.innerHTML = ""
-        let iframe = document.createElement("iframe")
-        iframe.src=`https://maps.google.com/maps?q=${lat.value},${long.value}&hl=id;z=14&amp;output=embed`
-        map.append(iframe)
-    }
-    lat.addEventListener("change", renderMap)
-    long.addEventListener("change", renderMap)
-    </script>
 <?= $this->endSection() ?>
