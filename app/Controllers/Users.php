@@ -54,9 +54,11 @@ class Users extends BaseController
 
     public function edit($id) {
 
+        $user = $this->userModel->where("id",session()->get('user_id'))->first();
+
         $data = [
             "username"=>$this->request->getPost("username"),
-            "role"=>$this->request->getPost("role"),
+            "role"=>$this->request->getPost("role") ?? $user->role,
         ];
 
         if ($this->request->getPost("password")) {
@@ -69,13 +71,13 @@ class Users extends BaseController
             $data = [
                 "username"=>$this->request->getPost("username"),
                 "password"=>password_hash($this->request->getPost("password"),PASSWORD_BCRYPT),
-                "role"=>$this->request->getPost("role"),
+                "role"=>$this->request->getPost("role")  ?? $user->role,
             ];
 
         }
 
         $this->userModel->where("id",$id)->set($data)->update();
         session()->setFlashdata("success","user_edited");
-        return redirect()->to(base_url("/users"));
+        return redirect()->to(base_url("/users/modify/".$id));
     }
 }
