@@ -26,8 +26,8 @@ CREATE TABLE `outlets` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `nama` varchar(255) NOT NULL,
   `alamat` varchar(255) NOT NULL,
-  `latitude` decimal(10,0) NOT NULL DEFAULT 0,
-  `longitude` decimal(10,0) NOT NULL DEFAULT 0,
+  `latitude` decimal(10,8) NOT NULL DEFAULT 0.00000000,
+  `longitude` decimal(11,8) NOT NULL DEFAULT 0.00000000,
   `photo` varchar(255) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Create Time',
@@ -35,7 +35,7 @@ CREATE TABLE `outlets` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `outlets_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='newTable';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='newTable';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `outlets` (
 
 LOCK TABLES `outlets` WRITE;
 /*!40000 ALTER TABLE `outlets` DISABLE KEYS */;
-INSERT INTO `outlets` VALUES (1,'outlet1','awdsdaw',20,10,'sawd.png',5,'2022-04-04 19:55:57','2022-04-05 02:55:57'),(2,'outlet2','awdawd',-30,243,'awda.png',5,'2022-04-04 19:57:54','2022-04-05 02:57:54'),(3,'outlet3','awdawd',-120,-3303,'awda.jpg',6,'2022-04-04 19:58:12','2022-04-05 02:58:12');
+INSERT INTO `outlets` VALUES (1,'outlet1','awdsdaw',0.51670000,101.44170000,'sawd.png',5,'2022-04-04 19:55:57','2022-04-08 02:40:00'),(2,'outlet2','awdawd',0.51670000,101.44170000,'awda.png',5,'2022-04-04 19:57:54','2022-04-08 02:40:00'),(3,'outlet3','awdawd',0.51670000,101.44170000,'awda.jpg',6,'2022-04-04 19:58:12','2022-04-08 02:40:00'),(11,'publicity','Jl Meranti',0.51670000,101.44170000,'1649366828_02df4cb6fe351e9ec4fd.jpeg',5,'2022-04-07 06:43:32','2022-04-07 16:27:44');
 /*!40000 ALTER TABLE `outlets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,7 +131,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (3,'owner','$2y$10$ynElboTW5MDV0pyBDeTfTOa/sr2lVukG3ZeYotWSpQfQwi2KMxWb.','owner','2022-04-04 19:54:30','2022-04-07 02:37:31'),(4,'admin','$2y$10$AHJPa4pO88jbRxEJxuLwkuOedYD3/Z6ixhqfOi/bQSESZV48uS1Y.','admin','2022-04-04 19:54:44','2022-04-06 14:37:54'),(5,'sales1','$2y$10$5XQpWJU3k9c00vCM9AiZ9.SsZ76DodspX8JG.3gcnhtubJrU32Jo6','sales','2022-04-04 19:54:57','2022-04-06 14:38:00'),(6,'sales2','$2y$10$.K97ApqhaY/3CMuGyKix8eDYQGy9X/u0NNUwjRG.4tuKtd3e.ZaZ.','sales','2022-04-04 19:55:09','2022-04-06 14:25:08');
+INSERT INTO `users` VALUES (3,'owner','$2y$10$ynElboTW5MDV0pyBDeTfTOa/sr2lVukG3ZeYotWSpQfQwi2KMxWb.','owner','2022-04-04 19:54:30','2022-04-07 02:37:31'),(4,'admin','$2y$10$AHJPa4pO88jbRxEJxuLwkuOedYD3/Z6ixhqfOi/bQSESZV48uS1Y.','admin','2022-04-04 19:54:44','2022-04-06 14:37:54'),(5,'sales1','$2y$10$gSRVbSCXQCYaT1vrBbFXrOGjLvpOe5qF5/bhpRf3vtMW8bDpnqetq','sales','2022-04-04 19:54:57','2022-04-07 01:02:28'),(6,'sales2','$2y$10$.K97ApqhaY/3CMuGyKix8eDYQGy9X/u0NNUwjRG.4tuKtd3e.ZaZ.','sales','2022-04-04 19:55:09','2022-04-06 14:25:08');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -144,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-07  2:47:20
+-- Dump completed on 2022-04-08  6:12:32
