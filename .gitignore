@@ -20,3 +20,5 @@ writable/**/*.db
 writable/**/*.sqlite
 
 .vscode/
+
+public/uploads/*
