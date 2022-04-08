@@ -114,17 +114,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    Data Jual Outlets
+                    Data Jual Outlet Keseluruhan
                 </div>
                 <div class="card-body">
+                    <small class="fst-italic text-danger">Tekan nama kolom untuk merubah urutan</small>
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
                                 <th>Nama Outlet</th>
-                                <th>Nama Sales</th>
                                 <?php 
                                 foreach ($products as $k=>$v) {
                                     echo "<th>".$v->nama."</th>";
@@ -139,7 +139,6 @@
                                 ?>
                                 <tr>
                                     <td><?= $v["nama_outlet"] ?></td>
-                                    <td><?= $v["nama_user"] ?></td>
                                     <?php
                                     foreach ($outletsData[$k]["products"] as $kk=>$vv) {
                                         ?>
@@ -148,6 +147,52 @@
                                     }
                                     ?>
                                     <td><?= $v["total"] ?></td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    Stock Outlet
+                </div>
+                <div class="card-body">
+                    <small class="fst-italic text-danger">Tekan nama kolom untuk merubah urutan</small>
+                    <table class="table table-striped" id="table2">
+                        <thead>
+                            <tr>
+                                <th>Nama Outlet</th>
+                                <?php 
+                                foreach ($products as $k=>$v) {
+                                    echo "<th>Stock ".$v->nama."</th>";
+                                }
+                                ?>
+                                <th>Total Stock</th>
+                                <th style="min-width:150px;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach ($outletsData as $k=>$v) {
+                                ?>
+                                <tr>
+                                    <td><?= $v["nama_outlet"] ?></td>
+                                    <?php
+                                    foreach ($outletsData[$k]["stocks"] as $kk=>$vv) {
+                                        ?>
+                                        <td><?= $vv["total"] ?></td>
+                                        <?php
+                                    }
+                                    ?>
+                                    <td><?= $v["total_stocks"] ?></td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Kelola Outlet</a>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -226,6 +271,7 @@
 <script>
     let table1 = document.querySelector('#table1');
     let dataTable = new simpleDatatables.DataTable(table1);
+    let dataTable2 = new simpleDatatables.DataTable(document.querySelector('#table2'));
 
     function getColumnIndexByName(dt, name) {
         for (i=0;i<dt.headings.length;i++) {
@@ -235,7 +281,9 @@
         }
         return -1
     }
+
     dataTable.columns().sort(getColumnIndexByName(dataTable,"total terjual"),"desc")
+    dataTable2.columns().sort(getColumnIndexByName(dataTable2,"total stock"),"desc")
 
     var optionswsw = {
         series: [<?php

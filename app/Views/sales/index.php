@@ -2,7 +2,6 @@
 <?= $this->section("content") ?>
 <div class="">
     <div class="row">
-        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     Outlets
@@ -37,7 +36,6 @@
                     </table>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 <?= $this->endSection() ?>

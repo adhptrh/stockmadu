@@ -44,12 +44,22 @@ class Home extends BaseController
                 "nama_outlet" => $v->nama,
                 "nama_user" => $v->username,
                 "products" => [],
-                "total"=>0
+                "stocks" => [],
+                "total_stocks"=>0,
+                "total"=>0,
             ]);
             foreach ($products as $kk=>$vv) {
                 $getTotal = $this->transactionModel->selectSum("count")->where("product_id",$vv->id)->where("outlet_id",$v->id)->where("count <",0)->first();
                 $outletsKV[$i]["total"] += abs($getTotal->count);
                 array_push($outletsKV[$i]["products"], [
+                    "nama"=>$vv->nama,
+                    "total"=>abs($getTotal->count)
+                ]);
+            }
+            foreach ($products as $kk=>$vv) {
+                $getTotal = $this->transactionModel->selectSum("count")->where("product_id",$vv->id)->where("outlet_id",$v->id)->first();
+                $outletsKV[$i]["total_stocks"] += abs($getTotal->count);
+                array_push($outletsKV[$i]["stocks"], [
                     "nama"=>$vv->nama,
                     "total"=>abs($getTotal->count)
                 ]);
