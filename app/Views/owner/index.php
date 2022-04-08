@@ -125,6 +125,7 @@
                         <thead>
                             <tr>
                                 <th>Nama Outlet</th>
+                                <th>Nama Sales</th>
                                 <?php 
                                 foreach ($products as $k=>$v) {
                                     echo "<th>".$v->nama."</th>";
@@ -139,6 +140,7 @@
                                 ?>
                                 <tr>
                                     <td><?= $v["nama_outlet"] ?></td>
+                                    <td><?= $v["nama_user"] ?></td>
                                     <?php
                                     foreach ($outletsData[$k]["products"] as $kk=>$vv) {
                                         ?>
@@ -191,7 +193,7 @@
                                     ?>
                                     <td><?= $v["total_stocks"] ?></td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">Kelola Outlet</a>
+                                        <a href="<?= base_url("/outlets/manage/".$v["id"]) ?>" class="btn btn-primary">Kelola Outlet</a>
                                     </td>
                                 </tr>
                                 <?php

@@ -41,6 +41,7 @@ class Home extends BaseController
         $i = 0;
         foreach ($outlets as $k=>$v) {
             array_push($outletsKV, [
+                "id"=>$v->id,
                 "nama_outlet" => $v->nama,
                 "nama_user" => $v->username,
                 "products" => [],
