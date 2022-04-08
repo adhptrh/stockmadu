@@ -99,6 +99,18 @@
                 </tr>
             </thead>
             <tbody>
+                
+            <?php
+                foreach ($transactions as $k=>$v) {
+                    ?>
+                    <tr>
+                        <td><?= $v->created_at ?></td>
+                        <td><?= $v->nama ?></td>
+                        <td><?= abs($v->count) ?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
             </tbody>
         </table>
     </div>

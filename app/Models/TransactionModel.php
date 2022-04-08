@@ -8,7 +8,7 @@ class TransactionModel extends Model {
     protected $table = 'transactions';
     protected $returnType    = \App\Entities\Transaction::class;
     protected $useTimestamps = true;
-    protected $allowedFields = ["id","product_id","outlet_id","count"];
+    protected $allowedFields = ["id","product_id","outlet_id","count","created_at"];
 
     public function getTransactionsPerMonth($product_id, $year) {
         $dates = [

@@ -9,6 +9,7 @@ use App\Models\OutletModel;
 use App\Models\ProductModel;
 use App\Models\TransactionModel;
 use App\Models\UserModel;
+use Config\Database;
 
 class Outlets extends BaseController
 {
@@ -19,6 +20,7 @@ class Outlets extends BaseController
         $this->userModel = new UserModel();
         $this->productModel = new ProductModel();
         $this->transactionModel = new TransactionModel();
+        $this->db = Database::connect();
     }
 
     public function new() {
@@ -87,6 +89,9 @@ class Outlets extends BaseController
     public function manage($id) {
         $products = $this->productModel->findAll();
         $productStocks = [];
+        $outlet = $this->outletModel->where("id",$id)->first();
+        //$transactions = $this->transactionModel->where("outlet_id", $outlet->id)->where("count <",0)->orderBy("created_at","DESC")->findAll();
+        $transactions = $this->db->query("SELECT t.*, p.nama FROM transactions t INNER JOIN products p ON p.id = t.product_id WHERE count < 0 ORDER BY created_at DESC")->getResult();
         foreach ($products as $k=>$v) {
             $stock = $this->transactionModel->selectSum("count")->where("product_id", $v->id)->findAll();
             $prod = [
@@ -99,7 +104,8 @@ class Outlets extends BaseController
             "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             "products"=>$products,
             "productStocks"=>$productStocks,
-            "outlet"=>$this->outletModel->where("id",$id)->first(),
+            "outlet"=>$outlet,
+            "transactions"=>$transactions
         ]);
     }
 
