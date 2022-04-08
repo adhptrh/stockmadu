@@ -7,16 +7,18 @@ use App\Entities\Product;
 use App\Entities\User;
 use App\Models\OutletModel;
 use App\Models\ProductModel;
+use App\Models\TransactionModel;
 use App\Models\UserModel;
 
 class Outlets extends BaseController
 {
-    public $productModel, $userModel;
 
     function __construct()
     {
         $this->outletModel = new OutletModel();
         $this->userModel = new UserModel();
+        $this->productModel = new ProductModel();
+        $this->transactionModel = new TransactionModel();
     }
 
     public function new() {
@@ -26,8 +28,6 @@ class Outlets extends BaseController
     }
 
     public function modify($id) {
-        header("X-Frame-Options: ALLOW-FROM https://maps.google.com/");
-        header("X-Frame-Options: ALLOW-FROM https://www.google.com/");
         return view("pages/outlets_edit",[
             "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
             "outlet"=>$this->outletModel->where("id", $id)->first()
@@ -85,8 +85,20 @@ class Outlets extends BaseController
     }
 
     public function manage($id) {
+        $products = $this->productModel->findAll();
+        $productStocks = [];
+        foreach ($products as $k=>$v) {
+            $stock = $this->transactionModel->selectSum("count")->where("product_id", $v->id)->findAll();
+            $prod = [
+                "nama"=>$v->nama,
+                "stock"=>$stock[0]->count ?? 0
+            ];
+            array_push($productStocks,$prod);
+        }
         return view("pages/outlet_manage",[
             "user"=>$this->userModel->where("id",session()->get("user_id"))->first(),
+            "products"=>$products,
+            "productStocks"=>$productStocks,
             "outlet"=>$this->outletModel->where("id",$id)->first(),
         ]);
     }

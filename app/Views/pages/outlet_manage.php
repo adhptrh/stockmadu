@@ -25,7 +25,7 @@
                         <input id="long" type="text" name="longitude" value="<?= $outlet->longitude ?>" class="form-control" id="basicInput" placeholder="Longitude" disabled>
                     </div>
                     <div class="form-group">
-                        <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?= $outlet->latitude ?>,<?= $outlet->longitude ?>&hl=es&z=14&amp;output=embed">
+                        <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?= $outlet->latitude ?>,<?= $outlet->longitude ?>&hl=id&z=15&amp;output=embed">
                         </iframe>
                     </div>
                     <a href="<?= base_url("/outlets/modify/" . $outlet->id) ?>" class="btn btn-primary">Edit</a>
@@ -37,7 +37,7 @@
         </div>
     </div>
 </div>
-<div class="d-flex p-0 mb-4">
+<!-- <div class="d-flex p-0 mb-4">
     
     <div class="bg-white rounded-3 shadow-sm border-start border-5 border-primary p-4 me-5" style="width:200px";>
         <div class="fw-bold">
@@ -56,15 +56,59 @@
             50
         </div>
     </div>
+</div> -->
+<div class="card shadow-sm">
+    <div class="card-header">
+        Stock
+    </div>
+    <div class="card-body">
+        <table class="table table-striped" id="table1">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Jumlah Stok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($productStocks as $k=>$v) {
+                    ?>
+                    <tr>
+                        <td><?= $v["nama"] ?></td>
+                        <td><?= $v["stock"] ?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="card shadow-sm">
     <div class="card-header">
-        Logs
+        Transaksi
     </div>
     <div class="card-body">
-        
+        <a href="#" class="btn btn-primary">Tambah Transaksi</a>
+        <table class="table table-striped" id="table2">
+            <thead>
+                <tr>
+                    <th>Jam</th>
+                    <th>Nama Produk</th>
+                    <th>Stock Keluar</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
+</div>
 </div>
 <?= $this->endSection() ?>
 <?= $this->section("footer") ?>
+<script>
+    let table1 = document.querySelector('#table1');
+    let dataTable = new simpleDatatables.DataTable(table1);
+    let dataTable2 = new simpleDatatables.DataTable(document.querySelector('#table2'));
+</script>
 <?= $this->endSection() ?>
