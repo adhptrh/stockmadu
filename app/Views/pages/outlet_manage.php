@@ -84,12 +84,42 @@
         </table>
     </div>
 </div>
+
+<div class="card shadow-sm">
+    <div class="card-header">
+        Tambah Transaksi
+    </div>
+    <div class="card-body">
+        <form action="<?= base_url("/transactions/add/".$outlet->id) ?>" method="POST">
+            <div class="form-group">
+                <div class="mb-4">
+                    <label for="basicInput">Product</label>
+                    <select name="product_id" class="form-select" id="basicSelect"> 
+                        <?php
+                        foreach ($products as $k=>$v) {
+                            ?>
+                            <option value="<?= $v->id ?>"><?= $v->nama ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="mb-4">
+                    <label for="basicInput">Jumlah Stok Keluar</label>
+                    <input type="number" name="count" class="form-control" id="basicInput" min="1" value="1">
+                </div>
+            </div>
+            <button  class="btn btn-primary">Tambah Transaksi</button>
+        </form>
+    </div>
+</div>
 <div class="card shadow-sm">
     <div class="card-header">
         Transaksi
     </div>
     <div class="card-body">
-        <a href="#" class="btn btn-primary">Tambah Transaksi</a>
         <table class="table table-striped" id="table2">
             <thead>
                 <tr>

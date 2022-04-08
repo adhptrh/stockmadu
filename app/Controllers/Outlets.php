@@ -93,7 +93,7 @@ class Outlets extends BaseController
         //$transactions = $this->transactionModel->where("outlet_id", $outlet->id)->where("count <",0)->orderBy("created_at","DESC")->findAll();
         $transactions = $this->db->query("SELECT t.*, p.nama FROM transactions t INNER JOIN products p ON p.id = t.product_id WHERE count < 0 ORDER BY created_at DESC")->getResult();
         foreach ($products as $k=>$v) {
-            $stock = $this->transactionModel->selectSum("count")->where("product_id", $v->id)->findAll();
+            $stock = $this->transactionModel->selectSum("count")->where("outlet_id",$id)->where("product_id", $v->id)->findAll();
             $prod = [
                 "nama"=>$v->nama,
                 "stock"=>$stock[0]->count ?? 0
