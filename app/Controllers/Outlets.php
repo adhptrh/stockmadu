@@ -63,9 +63,10 @@ class Outlets extends BaseController
     }
 
     public function edit($id) {
-
+        $outlet = $this->outletModel->where("id",$id)->first();
         $photo = $this->request->getFile("photo");
         if (!$photo->getError()) {
+            unlink("uploads/".$outlet->photo);
             $randname = $photo->getRandomName();
             $filePath = "uploads";
             $photo->move($filePath, $randname);

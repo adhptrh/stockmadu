@@ -12,8 +12,6 @@ use Config\Database;
 
 class Home extends BaseController
 {
-    public $outletModel, $userModel, $productModel, $transactionModel, $db;
-
     public function __construct()
     {
         $this->outletModel = new OutletModel();
