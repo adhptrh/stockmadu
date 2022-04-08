@@ -28,6 +28,19 @@ if ($user->role != "sales") {
 }
 ?>
 
+<?php
+if ($user->role == "owner" || $user->role == "admin" ) {
+?>
+<li class="sidebar-item <?= (current_url() == base_url("/index.php") . "/logs") ? "active" : ""; ?>">
+    <a href="<?= base_url("/logs") ?>" class='sidebar-link'>
+        <i class="bi bi-people"></i>
+        <span>Logs</span>
+    </a>
+</li>
+
+<?php
+}
+?>
 <li class="sidebar-item <?= (current_url() == base_url("/index.php") . "/users/modify/" . session()->get("user_id")) ? "active" : ""; ?>">
     <a href="<?= base_url("/users/modify/" . session()->get("user_id")) ?>" class='sidebar-link'>
         <i class="bi bi-people"></i>
