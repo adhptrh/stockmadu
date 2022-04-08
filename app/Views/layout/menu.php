@@ -19,7 +19,7 @@ if ($user->role != "sales") {
 
     <li class="sidebar-item <?= (current_url() == base_url("/index.php") . "/products") ? "active" : ""; ?>">
         <a href="<?= base_url("/products") ?>" class='sidebar-link'>
-            <i class="bi bi-people"></i>
+            <i class="bi bi-minecart-loaded"></i>
             <span>Products</span>
         </a>
     </li>
@@ -33,7 +33,7 @@ if ($user->role == "owner" || $user->role == "admin" ) {
 ?>
 <li class="sidebar-item <?= (current_url() == base_url("/index.php") . "/logs") ? "active" : ""; ?>">
     <a href="<?= base_url("/logs") ?>" class='sidebar-link'>
-        <i class="bi bi-people"></i>
+        <i class="bi bi-list"></i>
         <span>Logs</span>
     </a>
 </li>
@@ -43,7 +43,7 @@ if ($user->role == "owner" || $user->role == "admin" ) {
 ?>
 <li class="sidebar-item <?= (current_url() == base_url("/index.php") . "/users/modify/" . session()->get("user_id")) ? "active" : ""; ?>">
     <a href="<?= base_url("/users/modify/" . session()->get("user_id")) ?>" class='sidebar-link'>
-        <i class="bi bi-people"></i>
+        <i class="bi bi-gear"></i>
         <span>Setting Akun</span>
     </a>
 </li>
