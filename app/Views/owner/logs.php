@@ -10,10 +10,23 @@
                 <tr>
                     <th>Jam</th>
                     <th>Nama Outlet</th>
-                    <th>Stok Keluar</th>
+                    <th>Keterangan</th>
+                    <th>Jumlah</th>
                 </tr>
             </thead>
             <tbody>
+                <?php
+                foreach ($transactions as $k=>$v) {
+                    ?>
+                    <tr>
+                        <td><?= $v->created_at ?></td>
+                        <td><?= $v->nama_outlet ?></td>
+                        <td><?= ($v->count < 0) ? "STOK KELUAR":"STOK MASUK" ?></td>
+                        <td><?= $v->count ?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
             </tbody>
         </table>
     </div>
