@@ -31,6 +31,10 @@ class Products extends BaseController
     }
 
     public function add() {
+        if (!$this->isRole("owner") && !$this->isRole("admin")) {
+            session()->setFlashdata("fail","product_permission_denied");
+            return redirect()->to(base_url("/"));
+        }
         $nama = $this->request->getPost("nama");
         $product = new Product();
         $product->nama = $nama;
@@ -40,6 +44,10 @@ class Products extends BaseController
     }
 
     public function delete($id) {
+        if (!$this->isRole("owner") && !$this->isRole("admin")) {
+            session()->setFlashdata("fail","product_permission_denied");
+            return redirect()->to(base_url("/"));
+        }
         $this->productModel->delete($id);
         session()->setFlashdata("success","product_deleted");
         return redirect()->to(base_url("/products"));;
@@ -56,6 +64,11 @@ class Products extends BaseController
     }
 
     public function edit($id) {
+        
+        if (!$this->isRole("owner") && !$this->isRole("admin")) {
+            session()->setFlashdata("fail","product_permission_denied");
+            return redirect()->to(base_url("/"));
+        }
         $data = [
             "nama"=>$this->request->getPost("nama")
         ];

@@ -20,6 +20,9 @@
             case "outlet_not_owner":
                 echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal, kamu bukan pemilik outlet ini'})";
                 break;
+            case "product_permission_denied":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal, kamu bukan owner/admin'})";
+                break;
         }
         switch (session()->get('success')) {
             case "outlet_added":
