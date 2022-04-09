@@ -9,10 +9,10 @@
                 echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
                 break;
             case "user_not_deleted":
-                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menghapus user'})";
                 break;
             case "user_not_edited":
-                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal mengubah user'})";
                 break;
             case "transaction_count_greater_than_stock":
                 echo "Swal.fire({icon:'error',title:'Fail',text:'Stock tidak cukup'})";

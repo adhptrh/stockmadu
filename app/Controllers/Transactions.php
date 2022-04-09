@@ -31,14 +31,14 @@ class Transactions extends BaseController
             $trans->count = $count;
 
             $this->transactionModel->save($trans);
-            session()->set("success", "transaction_added");
+            session()->setFlashdata("success", "transaction_added");
             return redirect()->back();
         }
 
         $currentStock = $this->transactionModel->selectSum("count")->where("outlet_id",$outletId)->where("product_id",$this->request->getPost("product_id"))->first()->count;
         
         if ($currentStock < $count) {
-            session()->set("fail", "transaction_count_greater_than_stock");
+            session()->setFlashdata("fail", "transaction_count_greater_than_stock");
             return redirect()->back();
         }
 
@@ -48,7 +48,7 @@ class Transactions extends BaseController
         $trans->count = -$count;
 
         $this->transactionModel->save($trans);
-        session()->set("success", "transaction_added");
+        session()->setFlashdata("success", "transaction_added");
         return redirect()->back();
     }
 }

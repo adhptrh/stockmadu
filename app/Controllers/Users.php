@@ -29,7 +29,7 @@ class Users extends BaseController
 
     public function add()
     {
-        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+        if (!$this->isRole("owner") && !$this->isRole("admin")) {
             session()->setFlashdata("fail","user_not_added");
             return redirect()->back();
         }
@@ -53,20 +53,23 @@ class Users extends BaseController
     }
 
     public function modify($id) {
-        $user = $this->userModel->find($id);
+        $user = $this->userModel->find(session()->get("user_id"));
+        $userToEdit = $this->userModel->find($id);
 
         return view("pages/users_edit", [
             "user"=>$user,
+            "userToEdit"=>$userToEdit,
             "session"=>session()
         ]);
     }
 
     public function edit($id) {
-        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+        $user = $this->userModel->where("id",session()->get('user_id'))->first();
+        
+        if (!$this->isRole("owner") && !$this->isRole("admin") && $user->id != session()->get("user_id")) {
             session()->setFlashdata("fail","user_not_edited");
             return redirect()->back();
         }
-        $user = $this->userModel->where("id",session()->get('user_id'))->first();
 
         $data = [
             "username"=>$this->request->getPost("username"),

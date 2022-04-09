@@ -5,10 +5,10 @@
         Edit User
     </div>
     <div class="card-body">
-        <form action="<?= base_url("/users/edit/".$user->id) ?>" method="POST">
+        <form action="<?= base_url("/users/edit/".$userToEdit->id) ?>" method="POST">
             <div class="form-group">
                 <label for="basicInput">Nama</label>
-                <input type="text" value="<?= $user->username ?>" name="username" class="form-control" id="basicInput" placeholder="Nama User">
+                <input type="text" value="<?= $userToEdit->username ?>" name="username" class="form-control" id="basicInput" placeholder="Nama User">
             </div>
             <div class="form-group">
                 <label for="basicInput2">Ubah Password</label>
@@ -20,10 +20,10 @@
             </div>
             <fieldset class="form-group">
                 <label for="basicSelect">Role</label>
-                <select name="role" class="form-select" id="basicSelect" <?= ($session->get("user_id") == $user->id) ? "disabled":"" ?>>
-                    <option value="sales" <?= ($user->role == "sales") ? "selected":"" ?>>Sales</option>
-                    <option value="admin" <?= ($user->role == "admin") ? "selected":"" ?>>Admin</option>
-                    <option value="owner" <?= ($user->role == "owner") ? "selected":"" ?>>Owner</option>
+                <select name="role" class="form-select" id="basicSelect" <?= ($session->get("user_id") == $userToEdit->id) ? "disabled":"" ?>>
+                    <option value="sales" <?= ($userToEdit->role == "sales") ? "selected":"" ?>>Sales</option>
+                    <option value="admin" <?= ($userToEdit->role == "admin") ? "selected":"" ?>>Admin</option>
+                    <option value="owner" <?= ($userToEdit->role == "owner") ? "selected":"" ?>>Owner</option>
                 </select>
             </fieldset>
             <button class="btn btn-primary">Simpan</button>
