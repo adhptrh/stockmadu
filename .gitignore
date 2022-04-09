@@ -22,3 +22,5 @@ writable/**/*.sqlite
 .vscode/
 
 public/uploads/*
+
+.env

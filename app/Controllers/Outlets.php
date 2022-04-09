@@ -10,6 +10,7 @@ use App\Models\ProductModel;
 use App\Models\TransactionModel;
 use App\Models\UserModel;
 use Config\Database;
+use Exception;
 
 class Outlets extends BaseController
 {
@@ -79,7 +80,9 @@ class Outlets extends BaseController
         $outlet = $this->outletModel->where("id",$id)->first();
         $photo = $this->request->getFile("photo");
         if (!$photo->getError()) {
-            unlink("uploads/".$outlet->photo);
+            try{
+                unlink("uploads/".$outlet->photo);
+            }catch(Exception $e){}
             $randname = $photo->getRandomName();
             $filePath = "uploads";
             $photo->move($filePath, $randname);
