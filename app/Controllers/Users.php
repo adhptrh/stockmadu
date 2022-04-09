@@ -43,10 +43,11 @@ class Users extends BaseController
     }
 
     public function delete($id) {
-        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+        if (!$this->isRole("owner") && !$this->isRole("admin")) {
             session()->setFlashdata("fail","user_not_deleted");
             return redirect()->back();
         }
+
         $this->userModel->delete($id);
         session()->setFlashdata("success","user_deleted");
         return redirect()->to(base_url("/users"));;
