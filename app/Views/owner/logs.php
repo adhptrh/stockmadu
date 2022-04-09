@@ -21,7 +21,7 @@
                     <tr>
                         <td><?= $v->created_at ?></td>
                         <td><?= $v->nama_outlet ?></td>
-                        <td><?= ($v->count < 0) ? "STOK KELUAR":"STOK MASUK" ?></td>
+                        <td><?= ($v->count < 0) ? "<span class=\"badge bg-danger\">STOK KELUAR</span>":"<span class=\"badge bg-success\">STOK MASUK</span>" ?></span></td>
                         <td><?= $v->count ?></td>
                     </tr>
                     <?php

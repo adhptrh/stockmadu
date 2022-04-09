@@ -3,12 +3,12 @@
 
 <div class="card">
     <div class="card-header">
-        Tambah produk
+        Edit produk
     </div>
     <div class="card-body">
         <form action="<?= base_url("/products/edit/".$id) ?>" method="POST">
             <div class="form-group">
-                <label for="basicInput">Edit produk</label>
+                <label for="basicInput">Nama produk</label>
                 <input type="text" name="nama" class="form-control" value="<?= $product->nama ?>" id="basicInput" placeholder="Nama produk">
             </div>
             <button class="btn btn-primary">Simpan</button>
