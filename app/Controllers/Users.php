@@ -34,6 +34,7 @@ class Users extends BaseController
         $user->role = $this->request->getPost("role");
         $user->password = password_hash($this->request->getPost("password"),PASSWORD_BCRYPT);
         $this->userModel->save($user);
+        session()->setFlashdata("success","user_added");
         return redirect()->to(base_url("/users"));
     }
 

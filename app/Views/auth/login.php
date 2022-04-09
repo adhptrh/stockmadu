@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Mazer Admin Dashboard</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/pages/auth.css">
+    <link rel="stylesheet" href="<?= base_url("/assets/css/bootstrap.css") ?>">
+    
+    <link rel="stylesheet" href="<?= base_url("/assets/vendors/iconly/bold.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/assets/vendors/simple-datatables/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/assets/vendors/sweetalert2/sweetalert2.min.css") ?>">
+
+    <link rel="stylesheet" href="<?= base_url("/assets/vendors/perfect-scrollbar/perfect-scrollbar.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/assets/vendors/bootstrap-icons/bootstrap-icons.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/assets/css/app.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/assets/css/pages/auth.css") ?>">
 </head>
 
 <body>
@@ -54,6 +60,17 @@
 </div>
 
     </div>
+    
+    <script src="<?= base_url("/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js") ?>"></script>
+    <script src="<?= base_url("/assets/js/bootstrap.bundle.min.js") ?>"></script>
+    
+    <script src="<?= base_url("/assets/vendors/apexcharts/apexcharts.js") ?>"></script>
+    <script src="<?= base_url("/assets/js/pages/dashboard.js") ?>"></script>
+    <script src="<?= base_url("/assets/vendors/simple-datatables/simple-datatables.js") ?>"></script>
+    
+    <script src="<?= base_url("/assets/js/extensions/sweetalert2.js") ?>"></script>
+    <script src="<?= base_url("/assets/vendors/sweetalert2/sweetalert2.all.min.js") ?>"></script>
+    
 </body>
-
+<?= $this->include("include/swal") ?>
 </html>

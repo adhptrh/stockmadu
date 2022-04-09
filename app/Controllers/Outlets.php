@@ -38,9 +38,12 @@ class Outlets extends BaseController
 
     public function add() {
         $photo = $this->request->getFile("photo");
-        $randname = $photo->getRandomName();
-        $filePath = "uploads";
-        $photo->move($filePath, $randname);
+        $randname = "";
+        if (!$photo->getError()) {
+            $randname = $photo->getRandomName();
+            $filePath = "uploads";
+            $photo->move($filePath, $randname);
+        }
         
 
         $outlet = new Outlet();
@@ -52,7 +55,7 @@ class Outlets extends BaseController
         $outlet->user_id = session()->get("user_id");
 
         $this->outletModel->save($outlet);
-        session()->set("success","outlet_added");
+        session()->setFlashdata("success","outlet_added");
         return redirect()->to(base_url("/"));
     }
 

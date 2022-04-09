@@ -449,6 +449,8 @@
 <script>
 </script>
     <script src="<?= base_url("/assets/js/mazer.js") ?>"></script>
+    <?= $this->include("include/swal") ?>
+    
 </body>
 
 </html>
