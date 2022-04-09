@@ -5,6 +5,21 @@
             case "incorrect_creds":
                 echo "Swal.fire({icon:'error',title:'Fail',text:'Username atau password tidak tepat'})";
                 break;
+            case "user_not_added":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
+                break;
+            case "user_not_deleted":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
+                break;
+            case "user_not_edited":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal menambahkan user'})";
+                break;
+            case "transaction_count_greater_than_stock":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Stock tidak cukup'})";
+                break;
+            case "outlet_not_owner":
+                echo "Swal.fire({icon:'error',title:'Fail',text:'Gagal, kamu bukan pemilik outlet ini'})";
+                break;
         }
         switch (session()->get('success')) {
             case "outlet_added":

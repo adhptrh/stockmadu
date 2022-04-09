@@ -60,12 +60,22 @@ class Outlets extends BaseController
     }
 
     public function delete($id) {
+        $isOwner = count($this->outletModel->where("id",$id)->where("user_id",session()->get("user_id"))->findAll()) > 0;
+        if (!$isOwner) {
+            session()->setFlashdata("fail","outlet_not_owner");
+            return redirect()->to(base_url("/"));;
+        }
         $this->outletModel->delete($id);
         session()->setFlashdata("success","outlet_deleted");
         return redirect()->to(base_url("/"));;
     }
 
     public function edit($id) {
+        $isOwner = count($this->outletModel->where("id",$id)->where("user_id",session()->get("user_id"))->findAll()) > 0;
+        if (!$isOwner) {
+            session()->setFlashdata("fail","outlet_not_owner");
+            return redirect()->back();
+        }
         $outlet = $this->outletModel->where("id",$id)->first();
         $photo = $this->request->getFile("photo");
         if (!$photo->getError()) {

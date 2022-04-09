@@ -29,6 +29,10 @@ class Users extends BaseController
 
     public function add()
     {
+        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+            session()->setFlashdata("fail","user_not_added");
+            return redirect()->back();
+        }
         $user = new User();
         $user->username = $this->request->getPost("username");
         $user->role = $this->request->getPost("role");
@@ -39,6 +43,10 @@ class Users extends BaseController
     }
 
     public function delete($id) {
+        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+            session()->setFlashdata("fail","user_not_deleted");
+            return redirect()->back();
+        }
         $this->userModel->delete($id);
         session()->setFlashdata("success","user_deleted");
         return redirect()->to(base_url("/users"));;
@@ -54,7 +62,10 @@ class Users extends BaseController
     }
 
     public function edit($id) {
-
+        if (!$this->isRole("owner") || !$this->isRole("admin")) {
+            session()->setFlashdata("fail","user_not_edited");
+            return redirect()->back();
+        }
         $user = $this->userModel->where("id",session()->get('user_id'))->first();
 
         $data = [
